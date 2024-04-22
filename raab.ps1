@@ -3,7 +3,7 @@ $olApp.Quit()
 Remove-Variable olApp
 
 Get-ChildItem $env:LOCALAPPDATA\Microsoft\Outlook\* -Include dirigenten_rbartists_at*, solisten_rbartists_at*, tournee1_rbartists_at* | Remove-Item
-Set-Location HKCU:
+
 $Profiles = Get-ChildItem 'HKCU:\SOFTWARE\Microsoft\Office\16.0\Outlook\Profiles' |foreach {
     Get-ChildItem $_.Name |foreach {
         Get-ChildItem -Path $_.Name
